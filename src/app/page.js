@@ -1,6 +1,7 @@
-
+'use client'
 import Navbar1 from "@/Components/Navbar/Navbar1";
 import Slider from "@/Components/SecondSection/Slider";
+import Menu from "@/Components/menu/Menu";
 
 // import Image from "next/image";
 
@@ -11,6 +12,7 @@ export default function Home() {
 
     <Navbar1/>
     {/* <Slider/> */}
+    <Menu />
     </main>
   );
 }
