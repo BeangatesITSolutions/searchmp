@@ -29,6 +29,8 @@ import ListItemText from "@mui/material/ListItemText";
 
 const settings = ["Login", "Logout"];
 
+const login = false;
+
 function Navbar1() {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -49,18 +51,6 @@ function Navbar1() {
         ))}
       </List>
       <Divider />
-      {/* <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List> */}
     </Box>
   );
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -96,7 +86,7 @@ function Navbar1() {
         "& + .MuiSwitch-track": {
           opacity: 1,
           backgroundColor:
-            theme.palette.mode === "dark" ? "#177ddc" : "#1890ff",
+            theme.palette.mode === "dark" ? "#004346" : "#004346",
         },
       },
     },
@@ -121,18 +111,23 @@ function Navbar1() {
   }));
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl" className="bg-[#DCDF00] p-2.5 px-10 ">
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "transparent", boxShadow: "none" }}
+      className={"absolute top-0 z-50"}
+    >
+      <Container maxWidth="xl" className=" p-2.5 px-10  ">
         <Toolbar disableGutters>
           {/* Logo */}
           <Typography
-            href="#app-bar-with-responsive-menu"
+            href="#app-bar-with-responsive-menu "
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
+              zIndex: 1,
             }}
           >
-            <Image src={Logo} alt="logo" width={75} height={75} />
+            <Image src={Logo} alt="logo" width={70} height={70} />
           </Typography>
           {/* --------------------------------- */}
 
@@ -147,10 +142,11 @@ function Navbar1() {
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
-              fontWeight: 700,
+              fontWeight: 500,
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+             
             }}
           >
             {/* Mobaile logo  */}
@@ -162,32 +158,45 @@ function Navbar1() {
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
               justifyContent: "end",
-              gap: "50px",
+              gap:{xs:"none", md:"30px", lg:"50px"},
               alignItems: "center",
               cursor: "pointer",
               textTransform: "uppercase",
-              // border:"2px solid black",
             }}
           >
             {pages.map((page, index) => (
               <div
-                className="group px-3 text-center md:cursor-pointer"
+                className="group px-3 text-center md:cursor-pointer    "
                 key={index}
               >
-                <span>{page.names}</span>
+                <span className=" py-7 font-semibold hover:text-[#004346]">
+                  {page.names}
+                </span>
                 {page.submenu && (
-                  <div className="absolute  top-16 right-0 left-0 border-red-500 hidden group-hover:block hover:block ">
-                    <div className="bg-gray-700 p-4 w-full flex justify-start  gap-8  ">
+                  <div className="absolute text-[#004346] font-bold top-[70px]    right-0 left-0  hidden group-hover:block hover:block  ">
+                    <div
+                      style={{
+                        border: "1px solid rgba( 255, 255, 255, 0.10 )",
+                      }}
+                      sx={{
+                        background: "rgba( 255, 255, 255, 0.25 )",
+                        boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+                        backdropFilter: "blur( 8px )",
+                        WebkitBackdropFilter: "blur( 8px )",
+                        borderRadius: "10px",
+                      }}
+                      className=" bg-white    bg-opacity-25 shadow-lg backdrop-blur-xl rounded-md p-4 w-full flex justify-start  gap-8    "
+                    >
                       {page.sublinks.map((mysublinks, index) => (
                         <div key={index}>
                           <h1 className="text-lg ">{mysublinks.Head}</h1>
                           {mysublinks.sublink.map((slink, index) => (
                             <li
-                              className="list-none text-sm text-white my-2.5"
+                              className="list-none text-sm text-black my-2.5"
                               key={index}
                             >
                               <a
-                                className="hover:text-red-600"
+                                className="hover:text-white "
                                 href={slink.names}
                               >
                                 {slink.names}
@@ -212,39 +221,54 @@ function Navbar1() {
                 />
                 <Typography>अ</Typography>
               </Stack>
-
-              
             </Box>
 
             {/* Profile Button */}
+
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "block" } }}>
-              <Tooltip>
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: "45px" }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
+              {login ? (
+                <>
+                  <Tooltip>
+                    <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                      <Avatar
+                        alt="Remy Sharp"
+                        src="/static/images/avatar/2.jpg"
+                      />
+                    </IconButton>
+                  </Tooltip>
+                  <Menu
+                    sx={{ mt: "45px" }}
+                    id="menu-appbar"
+                    anchorEl={anchorElUser}
+                    anchorOrigin={{
+                      vertical: "top",
+                      horizontal: "right",
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "right",
+                    }}
+                    open={Boolean(anchorElUser)}
+                    onClose={handleCloseUserMenu}
+                  >
+                    {settings.map((setting) => (
+                      <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                        <Typography textAlign="center">{setting}</Typography>
+                      </MenuItem>
+                    ))}
+                  </Menu>{" "}
+                </>
+              ) : (
+                <Button
+                  variant="contained"
+                  style={{ backgroundColor: "#004346" }}
+                >
+                  Login
+                </Button>
+              )}
+
+              {/* Login Button */}
             </Box>
           </Box>
 

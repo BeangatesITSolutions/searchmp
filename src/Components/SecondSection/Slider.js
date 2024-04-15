@@ -1,63 +1,118 @@
 "use client";
 
 import React from "react";
-import Box from "@mui/material/Box";
+// Import Swiper React components
+
 import Image from "next/image";
-import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material";
-import { useState } from "react";
-import { useEffect } from "react";
+import { EffectFade, Pagination } from "swiper/modules";
+
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import { outlinedInputClasses } from "@mui/material/OutlinedInput";
+
+import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+
+// import required modules
+import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import { Search } from "@mui/icons-material";
+import { InputAdornment, InputLabel } from "@mui/material";
+// import { Search } from "@mui/icons-material";
+
+let img = [
+  require("@/assets/img/khana.jpg"),
+  require("@/assets/img/Bedaghat.jpg"),
+  require("@/assets/img/khajuraoTemple.jpg"),
+  require("@/assets/img/2.jpg"),
+];
+
+const customTheme = (outerTheme) =>
+  createTheme({
+    palette: {
+      mode: outerTheme.palette.mode,
+    },
+    components: {
+      MuiOutlinedInput: {
+        styleOverrides: {
+          notchedOutline: {
+            borderColor: "white",
+            background: "white",
+            color: "black",
+            width: "80ch",
+          },
+          root: {
+            [`&:hover .${outlinedInputClasses.notchedOutline}`]: {
+              borderColor: "#004346",
+            },
+            [`&.Mui-focused .${outlinedInputClasses.notchedOutline}`]: {
+              borderColor: "#004346",
+            },
+          },
+        },
+      },
+    },
+  });
+
 
 export default function Slider() {
-  const pic = [
-    require("@/assets/img/khajuraoTemple.jpg"),
-    require("@/assets/img/khana.jpg"),
-    require("@/assets/img/omkareshwer.jpg"),
-    require("@/assets/img/Bedaghat.jpg"),
-  ];
-
-  const [active, setfirst] = useState(0);
-
-  const clicknext = () => {
-    active === Image.length - 1 ? setfirst(0) : setfirst(active + 1);
-  };
-
-  const clickprev = () => {
-    active === 0 ? setfirst(Image.length - 1) : setfirst(active - 1);
-  };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      clicknext();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  },);
+  const outerTheme = useTheme();
 
   return (
-    <div>
-      <Box className="w-full flex justify-center items-center gap-3 transition-transform ease-in-out duration-200 rounded-2xl">
-        {pic.map((pic, index) => (
-          <div key={index} className="text-black">
+    <>
+      <Swiper
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
+        }}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        spaceBetween={10}
+        effect={"fade"}
+        navigation={false}
+        pagination={{ clickable: false }}
+        modules={[
+          FreeMode,
+          Navigation,
+          Thumbs,
+          EffectFade,
+          Pagination,
+          Autoplay,
+        ]}
+        className="mySwiper2 h-full w-full flex justify-center items-center"
+      >
+        {/* Search BOX */}
+
+        <Box className="absolute top-[30%] left-[25%] z-50 flex justify-between items-center  ">
+          <Search className="bg-[#004346] h-14 w-8  " />
+          <ThemeProvider theme={customTheme(outerTheme)}>
+            <TextField  label="search"  />
+          </ThemeProvider>
+        </Box>
+
+        {img.map((img, iindex) => (
+          <SwiperSlide key={iindex} className="h-full w-full">
             <Image
-              src={pic}
-              alt=""
-              width={300}
-              height={350}
-              className="w-full h-full object-contain  "
+              width={10000}
+              height={10000}
+              className=" object-cover max-h-full h-[100vh] max-w-full overflow-hidden aspect-video bg-center relative"
+              alt="d"
+              src={img}
             />
-          </div>
+          </SwiperSlide>
         ))}
-      </Box>
-      <Box className="absolute  w-full flex justify-center items-center">
-        <Box onClick={clickprev} className="">
-          <ArrowBackIosNew sx={{ color: "red", cursor: "pointer" }} />
-        </Box>
-        <Box onClick={clicknext} className="">
-          <ArrowForwardIos sx={{ color: "red", cursor: "pointer" }} />
-        </Box>
-      </Box>
-    </div>
+      </Swiper>
+    </>
   );
 }

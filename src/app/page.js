@@ -1,5 +1,5 @@
 
-import Navbar1 from "@/Components/Navbar/Navbar1";
+import Navbar1 from "@/Components/Navbar/Navbar";
 import Slider from "@/Components/SecondSection/Slider";
 
 // import Image from "next/image";
@@ -10,7 +10,8 @@ export default function Home() {
     
 
     <Navbar1/>
-    {/* <Slider/> */}
+    <Slider/>
+    
     </main>
   );
 }
