@@ -192,7 +192,7 @@ export const pages = [
       },
 
       {
-        Head: "Advanture",
+        Head: "Adventure",
         sublink: [
           {
             names: "XYZSWW",
