@@ -1,4 +1,5 @@
 "use client";
+import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import oneside from "@/assets/img/oneside.jpg";
@@ -7,7 +8,7 @@ import bgimg from "@/assets/img/bgimg.jpg";
 import Gwalior from "@/assets/img/Gwalior.jpg";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import * as React from "react";
+
 import Stack from "@mui/material/Stack";
 import IconButton from "@mui/material/IconButton";
 import Input from "@mui/material/Input";
@@ -16,7 +17,6 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
-
 import Button from "@mui/material/Button";
 
 const img = require("@/assets/img/Gwalior.jpg");
@@ -43,7 +43,7 @@ export default function Page() {
             sm: "210px",
             xs: "69vh",
           },
-     
+
           minHeight: 400,
           textAlign: "center",
         }}
@@ -52,9 +52,7 @@ export default function Page() {
           variant="h5"
           sx={{
             marginBottom: 8,
-            "fontFamily":"revert-layer",
-               
-            
+            fontFamily: "revert-layer",
           }}
         >
           Explore Top Tourist Destinations in Madhya Pradesh
@@ -137,7 +135,7 @@ export default function Page() {
                     },
 
                     content: `'Khushbu kannojiya'`,
-                    
+
                     borderBottomRightRadius: "20px",
                     borderEndEndRadius: "20px",
                     transition: " all 0.4s",
@@ -157,8 +155,6 @@ export default function Page() {
               <Box
                 sx={{
                   position: "relative",
-
-                
                 }}
               >
                 <span
@@ -587,9 +583,7 @@ export default function Page() {
                   style={{
                     color: "#fff",
                   }}
-                >
-                  
-                </span>
+                ></span>
               </Box>
             </Box>
           </Grid>
