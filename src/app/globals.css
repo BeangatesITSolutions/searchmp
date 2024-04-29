@@ -9,7 +9,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --theme-color:#DCDF00;
+  --theme-color:#004346;
+  /* #004346 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,12 +23,15 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+    background-color: #fff;
+    color: black;
+     height: 100%;
     font-family: 'Sen Variable', sans-serif;
 }
 
@@ -36,3 +40,4 @@ body {
     text-wrap: balance;
   }
 }
+
