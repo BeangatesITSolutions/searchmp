@@ -86,7 +86,7 @@ function Navbar1() {
         "& + .MuiSwitch-track": {
           opacity: 1,
           backgroundColor:
-            theme.palette.mode === "dark" ? "#004346" : "#004346",
+            theme.palette.mode === "dark" ? "#4682c7" : "#4682c7",
         },
       },
     },
@@ -169,11 +169,11 @@ function Navbar1() {
                 className="group px-3 text-center md:cursor-pointer    "
                 key={index}
               >
-                <span className=" py-7 font-semibold hover:text-[#004346]">
+                <span className=" py-7 font-semibold hover:text-[#4682c7]">
                   {page.names}
                 </span>
                 {page.submenu && (
-                  <div className="absolute text-[#004346] font-bold top-[70px]    right-0 left-0  hidden group-hover:block hover:block  ">
+                  <div className="absolute text-[#4682c7] font-bold top-[70px]    right-0 left-0  hidden group-hover:block hover:block  ">
                     <div
                       style={{
                         border: "1px solid rgba( 255, 255, 255, 0.10 )",
@@ -262,7 +262,7 @@ function Navbar1() {
               ) : (
                 <Button
                   variant="contained"
-                  style={{ backgroundColor: "#004346" }}
+                  style={{ backgroundColor: "#4682c7" }}
                 >
                   Login
                 </Button>
