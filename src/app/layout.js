@@ -9,7 +9,7 @@ export const metadata = {
 export default function RootLayout({children}) {
   return (
     <html lang="en">
-      <body className={"font-['Sen Variable', sans-serif,] flex  h-screen "}>{children}</body>
+      <body className={"font-['Sen Variable', sans-serif,] "}>{children}</body>
     </html>
   );
 }

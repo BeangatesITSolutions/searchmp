@@ -28,9 +28,9 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
-import { Padding, Search } from "@mui/icons-material";
-import { color } from "framer-motion";
-import zIndex from "@mui/material/styles/zIndex";
+// import { Search } from "@mui/icons-material";
+// import { color } from "framer-motion";
+// import zIndex from "@mui/material/styles/zIndex";
 
 let img = [
   require("@/assets/img/khana.jpg"),
@@ -107,7 +107,7 @@ export default function Slider() {
           Pagination,
           Autoplay,
         ]}
-        className="mySwiper2 h-full w-full flex justify-center items-center"
+        className="h-[100%] overflow-hidden w-full flex justify-center items-center"
       >
         {/* Search BOX */}
 
@@ -123,20 +123,20 @@ export default function Slider() {
           }}
         >
           <ThemeProvider theme={customTheme(outerTheme)}>
-        {/* <Search className="bg-white text-black h-14 w-8  " /> */}
 
             <TextField className="relative w-full" label="Search" />
           </ThemeProvider>
         </Box>
 
         {img.map((img, iindex) => (
-          <SwiperSlide key={iindex} className="h-full w-full">
+          <SwiperSlide key={iindex} className="h-screen w-screen">
             <Image
               width={10000}
               height={10000}
               className=" object-cover max-h-full h-[100vh] max-w-full overflow-hidden aspect-video bg-center relative"
               alt="d"
               src={img}
+              
             />
           </SwiperSlide>
         ))}

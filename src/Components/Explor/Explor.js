@@ -26,27 +26,27 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
-export default function Page() {
+export default function Explore() {
   return (
     <>
       <Box
-        sx={{
-          position: "absolute",
-          top: "35%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "60vw",
+        // sx={{
+        //   position: "absolute",
+        //   top: "35%",
+        //   left: "50%",
+        //   transform: "translate(-50%, -50%)",
+        //   width: "60vw",
 
-          height: {
-            lg: "70%",
-            md: "210px",
-            sm: "210px",
-            xs: "69vh",
-          },
+        //   height: {
+        //     lg: "70%",
+        //     md: "210px",
+        //     sm: "210px",
+        //     xs: "69vh",
+        //   },
 
-          minHeight: 400,
-          textAlign: "center",
-        }}
+        //   minHeight: 400,
+        //   textAlign: "center",
+        // }}
       >
         <Typography
           variant="h5"
@@ -145,9 +145,11 @@ export default function Page() {
             >
               <Image
                 src={oneside}
+                width={100}
+                height={100}
+                alt="jfbv"
                 style={{
                   height: "100%",
-
                   border: "1px solid red",
                 }}
               />

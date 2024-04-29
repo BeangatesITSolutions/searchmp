@@ -1,10 +1,10 @@
 "use client";
 
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import Image from "next/image";
 
 // const first = require("@/assets/img/hos.jpg");
-const first = require('@/assets/img/hospi.jpg')
+const first = require("@/assets/img/hospi.jpg");
 const sec = require("@/assets/img/Destin.jpg");
 const third = require("@/assets/img/edu1.jpg");
 import {
@@ -15,13 +15,18 @@ import {
 
 export default function AniCards() {
   return (
+    <>
+    
     <Box
       sx={{
         backgroundImage:
           "radial-gradient(at 40% 18%, hsla(185,100%,74%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(351,0%,100%,1) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(189,100%,56%,1) 0px, transparent 50%)",
         backgroundColor: "hsla(0,14%,92%,1)",
-        height: "80vh",
-        width: "100%",
+
+        height:'80vh',
+        // width:'100%',
+        // overflow:'hidden',
+        // marginTop:'50px',
       }}
     >
       <Box
@@ -41,6 +46,7 @@ export default function AniCards() {
           top: "80%",
           left: "10%",
           zIndex: "999",
+          overflow: "hidden",
         }}
       >
         <Box className="pt-5"></Box>
@@ -213,5 +219,6 @@ export default function AniCards() {
         </Box>
       </Box>
     </Box>
+    </>
   );
 }
