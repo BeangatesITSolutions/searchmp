@@ -10,7 +10,7 @@ import Explore from "@/Components/Explor/Explor";
 
 export default function page() {
   return (
-    <main className="flex flex-col h-full    " >
+    <main className="flex flex-col h-full    "  >
     
 
     <Navbar1/>
