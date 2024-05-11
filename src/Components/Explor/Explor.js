@@ -29,53 +29,16 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Ex() {
   return (
     <>
-      <Box
-        sx={{
-          backgroundImage:
-            " radial-gradient( circle 400px at 6.8% 8.3%,  rgba(255,244,169,1) 0%, rgba(255,244,234,1) 100.2% );linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% )",
-          height: {
-            lg: "650px",
-            md: "103vh",
-            sm: "859px",
-            xs: "1841px",
-            // border:"2px solid green",
-          },
-        }}
-      >
+      <Box sx={{paddingBottom:'80px', paddingTop:'30px', border:'2px solid red'}}>
         <Typography
           variant="h5"
           sx={{
             marginBottom: 8,
-            fontFamily: "revert-layer",
+            // fontFamily: "revert-layer",
             textAlign: "center",
             marginTop: "2%",
-            color: "black",
-            fontSize: "30px",
-
-            position: "relative",
-
-            // backgroundColor:"red",
-            "::after": {
-              content: `''`,
-              display: "block",
-              width: 0,
-              height: "5px",
-              backgroundColor: "goldenrod",
-              position: "absolute",
-              bottom: "-2px",
-              left: "312px",
-              transition: "width 0.3s ease",
-              fontWeight: "bold",
-            },
-            ":hover": {
-              "::after": {
-                // width:"44%"
-                width: {
-                  lg: "55%",
-                  md: "0",
-                },
-              },
-            },
+            fontWeight:'bold',
+        
           }}
         >
           Explore Top Tourist Destinations in Madhya Pradesh
@@ -136,7 +99,7 @@ export default function Ex() {
                   sm: "12%",
                   xs: "25%",
                 },
-                marginTop: {
+                marginBottom: {
                   lg: "0",
                   md: "0",
                   sm:"0%",
@@ -165,8 +128,6 @@ export default function Ex() {
                   WebkitBackdropFilter: "blur(2px)",
                   transition: "all 0.5s",
                   color: "#fff",
-
-                  
                 },
 
                 ":hover": {
@@ -229,7 +190,6 @@ export default function Ex() {
                   xs:"65vw"
                 
                 },
-                borderRadius:"11%",
                 justifyContent: "center",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
@@ -249,7 +209,7 @@ export default function Ex() {
                  xs:"25%"
               
                 },
-                marginTop: {
+                marginBottom: {
                   lg: "0",
                   md: "0",
                   sm: "-0%",
@@ -268,6 +228,7 @@ export default function Ex() {
                   justifyContent: "center",
                   fontSize: "25px",
                   fontWeight: "bold",
+                  color: "#fff",
                   boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
                   backdropFilter: "blur(2px)",
                   WebkitBackdropFilter: "blur(2px)",
@@ -290,7 +251,8 @@ export default function Ex() {
                       sm: "39%",
                       xs: "45vh",
                     },
-                    content: `'Bhopal City'`,
+
+                    content: `'Khushbu kannojiya'`,
                     borderBottomRightRadius: "20px",
                     borderEndEndRadius: "20px",
                     transition: " all 0.4s",
@@ -377,7 +339,7 @@ export default function Ex() {
                   boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
                   backdropFilter: "blur(2px)",
                   WebkitBackdropFilter: "blur(2px)",
-                  transition: "all 0.5s",
+                  transition: "all 0.8s",
                   color: "#fff",
                 },
 
@@ -405,7 +367,10 @@ export default function Ex() {
               }}
             >
               <Image
-                src={narmada}
+                src={ujjen}
+                height={10000}
+                width={10000}
+                alt="no img"
                 style={{
                   height: "100%",
                   width: "100%",
@@ -445,7 +410,7 @@ export default function Ex() {
                  xs:"65vw"
                 },
                 alignItems: "center",
-                borderRadius: "11%",
+                borderRadius: "8px",
                 border: {
                   // lg: "3px solid green",
                   // md: "3px solid pink",
@@ -620,8 +585,10 @@ export default function Ex() {
               }}
             >
               <Image
-                src={mhakal}
-                alt="Gwalior"
+                src={Gwalior}
+                height={10000}
+                width={10000}
+                alt="no img"
                 style={{
                   height: "100%",
                   width: "100%",
@@ -727,8 +694,10 @@ export default function Ex() {
               }}
             >
               <Image
-                src={Amarkanatak}
-                alt="Gwalior"
+                src={Gwalior}
+                height={10000}
+                width={10000}
+                alt="no img"
                 style={{
                   height: "100%",
                   width: "100%",
