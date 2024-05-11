@@ -25,22 +25,28 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Ex() {
   return (
     <>
-      <Box  > 
+      <Box sx={{paddingBottom:'80px', paddingTop:'30px', border:'2px solid red'}}>
         <Typography
           variant="h5"
           sx={{
             marginBottom: 8,
-            fontFamily: "revert-layer",
+            // fontFamily: "revert-layer",
             textAlign: "center",
             marginTop: "2%",
+            fontWeight:'bold',
+        
           }}
         >
           Explore Top Tourist Destinations in Madhya Pradesh
         </Typography>
         <Grid
           container
-          direction= {{ xs: "row", sm: "row" ,  alignItems:"center",
-          justify:"center"}}
+          direction={{
+            xs: "row",
+            sm: "row",
+            alignItems: "center",
+            justify: "center",
+          }}
           spacing={{ xs: 8, md: 3, lg: 4, sm: 3 }}
           sx={{
             height: "70vh",
@@ -60,8 +66,8 @@ export default function Ex() {
 
                   xs: "280px",
                 },
-                alignItems:"center",
-                justifyContent:"center",
+                alignItems: "center",
+                justifyContent: "center",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 objectFit: "cover",
@@ -77,7 +83,7 @@ export default function Ex() {
                 marginLeft: {
                   lg: "61%",
                 },
-                marginBottom:{
+                marginBottom: {
                   lg: "0",
                   md: "0",
                   sm: "0",
@@ -99,7 +105,7 @@ export default function Ex() {
                   backdropFilter: "blur(2px)",
                   WebkitBackdropFilter: "blur(2px)",
                   transition: "all 0.5s",
-                  color:"#fff"
+                  color: "#fff",
                 },
 
                 ":hover": {
@@ -153,7 +159,7 @@ export default function Ex() {
 
                   xs: "280px",
                 },
-                justifyContent:"center",
+                justifyContent: "center",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 objectFit: "cover",
@@ -168,7 +174,7 @@ export default function Ex() {
                 marginLeft: {
                   lg: "200px",
                 },
-                marginBottom:{
+                marginBottom: {
                   lg: "0",
                   md: "0",
                   sm: "0",
@@ -187,7 +193,7 @@ export default function Ex() {
                   justifyContent: "center",
                   fontSize: "25px",
                   fontWeight: "bold",
-                  color:"#fff",
+                  color: "#fff",
                   boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
 
                   backdropFilter: "blur(2px)",
@@ -204,14 +210,14 @@ export default function Ex() {
                       sm: "30vw",
                       xs: "280px",
                     },
-          
+
                     height: {
                       lg: "32%",
                       md: "205px",
                       sm: "207px",
                       xs: "178px",
                     },
-                   
+
                     content: `'Khushbu kannojiya'`,
                     borderBottomRightRadius: "20px",
                     borderEndEndRadius: "20px",
@@ -256,8 +262,8 @@ export default function Ex() {
 
                   xs: "280px",
                 },
-                alignItems:"center",
-                justifyContent:"center",
+                alignItems: "center",
+                justifyContent: "center",
                 marginLeft: {
                   lg: "250px",
                 },
@@ -292,7 +298,7 @@ export default function Ex() {
                   backdropFilter: "blur(2px)",
                   WebkitBackdropFilter: "blur(2px)",
                   transition: "all 0.8s",
-                  color:"#fff"
+                  color: "#fff",
                 },
 
                 ":hover": {
@@ -320,6 +326,9 @@ export default function Ex() {
             >
               <Image
                 src={ujjen}
+                height={10000}
+                width={10000}
+                alt="no img"
                 style={{
                   height: "100%",
                 }}
@@ -352,7 +361,7 @@ export default function Ex() {
 
                   xs: "280px",
                 },
-                alignItems:"center",
+                alignItems: "center",
                 borderRadius: "8px",
                 border: {
                   lg: "3px solid green",
@@ -383,7 +392,7 @@ export default function Ex() {
                   backdropFilter: "blur(2px)",
                   WebkitBackdropFilter: "blur(2px)",
                   transition: "all 0.5s",
-                  color:"#fff"
+                  color: "#fff",
                 },
 
                 ":hover": {
@@ -450,7 +459,7 @@ export default function Ex() {
                   // sm: "325px",
                   xs: "280px",
                 },
-                alignItems:"center",
+                alignItems: "center",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 objectFit: "cover",
@@ -485,7 +494,7 @@ export default function Ex() {
                   backdropFilter: "blur(2px)",
                   WebkitBackdropFilter: "blur(2px)",
                   transition: "all 0.5s",
-                  color:"#fff"
+                  color: "#fff",
                 },
 
                 ":hover": {
@@ -514,6 +523,9 @@ export default function Ex() {
             >
               <Image
                 src={Gwalior}
+                height={10000}
+                width={10000}
+                alt="no img"
                 style={{
                   height: "100%",
                 }}
@@ -547,7 +559,7 @@ export default function Ex() {
 
                   xs: "280px",
                 },
-                alignItems:"center",
+                alignItems: "center",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 objectFit: "cover",
@@ -582,7 +594,7 @@ export default function Ex() {
                   backdropFilter: "blur(2px)",
                   WebkitBackdropFilter: "blur(2px)",
                   transition: "all 0.5s",
-                  color:"#fff"
+                  color: "#fff",
                 },
 
                 ":hover": {
@@ -613,6 +625,9 @@ export default function Ex() {
             >
               <Image
                 src={Gwalior}
+                height={10000}
+                width={10000}
+                alt="no img"
                 style={{
                   height: "100%",
                 }}
@@ -620,8 +635,6 @@ export default function Ex() {
 
               <Box
                 sx={{
-                
-
                   bottom: "170px",
                 }}
               >

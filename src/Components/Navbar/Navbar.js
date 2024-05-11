@@ -23,6 +23,7 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import { styled } from "@mui/material/styles";
+// import Switch from '@mui/material/Switch';
 import Stack from "@mui/material/Stack";
 
 import ListItemText from "@mui/material/ListItemText";
@@ -109,7 +110,6 @@ function Navbar1() {
       boxSizing: "border-box",
     },
   }));
-
   return (
     <AppBar
       position="static"
@@ -215,10 +215,10 @@ function Navbar1() {
             <Box>
               <Stack direction="row" spacing={1} alignItems="center">
                 <Typography>A</Typography>
-                <AntSwitch
+          <AntSwitch
                   defaultChecked
                   inputProps={{ "aria-label": "ant design" }}
-                />
+                /> 
                 <Typography>अ</Typography>
               </Stack>
             </Box>
