@@ -1,12 +1,10 @@
-"use client";
-import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import temple from "@/assets/img/temple.jpg";
 import narmada from "@/assets/img/narmada.jpg";
 import bgimg from "@/assets/img/bgimg.jpg";
 import Khajuro from "@/assets/img/khajuraoTemple.jpg";
-
+import Gwlior from "@/assets/img/Gwalior.jpg";
 import bhopal from "@/assets/img/bhopal.jpg";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -29,7 +27,24 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Ex() {
   return (
     <>
-      <Box sx={{paddingBottom:'80px', paddingTop:'30px', border:'2px solid red'}}>
+      <Box
+        sx={{
+          paddingBottom: "80px",
+          //  border:"2px solid red"
+          border: {
+            // lg: "3px solid green",
+            // md: "3px solid pink",
+            // sm: "5px solid blue",
+            // xs: "3px solid orange",
+          },
+          height:{
+            lg:"700px",
+            md:"700px",
+            sm:"860px",
+            xs:"1800px"
+          }
+        }}
+      >
         <Typography
           variant="h5"
           sx={{
@@ -37,8 +52,8 @@ export default function Ex() {
             // fontFamily: "revert-layer",
             textAlign: "center",
             marginTop: "2%",
-            fontWeight:'bold',
-        
+            fontWeight: "bold",
+            cursor:"pointer"
           }}
         >
           Explore Top Tourist Destinations in Madhya Pradesh
@@ -65,14 +80,13 @@ export default function Ex() {
                   lg: "32vh",
                   md: "36vh",
                   sm: "40vh",
-                  xs:"45vh"
-                
+                  xs: "45vh",
                 },
                 width: {
                   lg: "19vw",
                   md: "19vw",
                   sm: "34vw",
-                  xs:"65vw"
+                  xs: "65vw",
                 },
                 alignItems: "center",
                 justifyContent: "center",
@@ -82,10 +96,8 @@ export default function Ex() {
                 "&:hover, &:focus-within": {
                   transform: "scale(1.03)",
                   transition: "transform 500ms ease-in",
-                
-             
                 },
-                
+
                 borderRadius: "8px",
                 border: {
                   // lg: "3px solid green",
@@ -102,18 +114,19 @@ export default function Ex() {
                 marginBottom: {
                   lg: "0",
                   md: "0",
-                  sm:"0%",
+                  sm: "0%",
                   xs: "6%",
                 },
                 marginBottom: {
                   lg: "0",
                   xs: "3%",
-
                 },
-                borderRadius:"11%",
+                borderRadius: "11%",
                 ":before": {
                   position: "absolute",
                   borderBottomRightRadius: "80px",
+                  // borderTopRightRadius:"40px",
+                  borderTopLeftRadius:"19px",
                   content: `''`,
                   width: "8%",
                   height: "12%",
@@ -145,7 +158,7 @@ export default function Ex() {
                       sm: "39%",
                       xs: "45vh",
                     },
-                    content: `'Mandu'`,
+                    content: `'Bhopal City'`,
                     borderBottomRightRadius: "20px",
                     borderEndEndRadius: "20px",
                     transition: " all 0.4s",
@@ -154,12 +167,12 @@ export default function Ex() {
               }}
             >
               <Image
-                src={temple}
+                src={bhopal}
                 alt="oneside"
                 style={{
                   height: "100%",
                   width: "100%",
-                  borderRadius:"19px"
+                  borderRadius: "19px",
                 }}
               />
 
@@ -181,21 +194,20 @@ export default function Ex() {
 
                   md: "36vh",
                   sm: "40vh",
-                  xs:"45vh"
+                  xs: "45vh",
                 },
                 width: {
                   lg: "19vw",
                   md: "19vw",
                   sm: "55vw",
-                  xs:"65vw"
-                
+                  xs: "65vw",
                 },
                 justifyContent: "center",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 objectFit: "cover",
 
-                borderRadius:"11%",
+                borderRadius: "11%",
                 border: {
                   // lg: "3px solid green",
                   // md: "3px solid pink",
@@ -205,9 +217,8 @@ export default function Ex() {
                 marginLeft: {
                   lg: "250px",
                   sm: "-73%",
-                 md:"84%",
-                 xs:"25%"
-              
+                  md: "84%",
+                  xs: "25%",
                 },
                 marginBottom: {
                   lg: "0",
@@ -219,6 +230,7 @@ export default function Ex() {
                 ":before": {
                   position: "absolute",
                   borderBottomRightRadius: "80px",
+                  borderTopLeftRadius:"19px",
                   content: `''`,
                   width: "8%",
                   height: "12%",
@@ -226,7 +238,7 @@ export default function Ex() {
                   display: "flex",
                   alignitems: "center",
                   justifyContent: "center",
-                  fontSize: "25px",
+                  fontSize: "19px",
                   fontWeight: "bold",
                   color: "#fff",
                   boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
@@ -252,7 +264,7 @@ export default function Ex() {
                       xs: "45vh",
                     },
 
-                    content: `'Khushbu kannojiya'`,
+                    content: `'Mansingh Palace, Gwalior'`,
                     borderBottomRightRadius: "20px",
                     borderEndEndRadius: "20px",
                     transition: " all 0.4s",
@@ -261,12 +273,12 @@ export default function Ex() {
               }}
             >
               <Image
-                src={bhopal}
+                src={temple}
                 alt="Gwalior"
                 style={{
                   height: "100%",
                   width: "100%",
-                  borderRadius:"19px"
+                  borderRadius: "19px",
                 }}
               />
 
@@ -291,14 +303,13 @@ export default function Ex() {
                   lg: "53vh",
                   md: "43vh",
                   sm: "40vh",
-                  xs:"45vh"
-                 
+                  xs: "45vh",
                 },
                 width: {
                   lg: "35vw",
                   md: "41vw",
                   sm: "55vw",
-                  xs:"65vw"
+                  xs: "65vw",
                 },
                 alignItems: "center",
                 justifyContent: "center",
@@ -306,7 +317,7 @@ export default function Ex() {
                   lg: "42%",
                   sm: "15%",
                   md: "34%",
-                  xs:"25%"
+                  xs: "25%",
                 },
 
                 borderRadius: "11%",
@@ -331,6 +342,7 @@ export default function Ex() {
                   width: "8%",
                   height: "12%",
                   cursor: "pointer",
+                  borderTopLeftRadius:"19px",
                   display: "flex",
                   alignitems: "center",
                   justifyContent: "center",
@@ -367,14 +379,14 @@ export default function Ex() {
               }}
             >
               <Image
-                src={ujjen}
+                src={narmada}
                 height={10000}
                 width={10000}
                 alt="no img"
                 style={{
                   height: "100%",
                   width: "100%",
-                  borderRadius:"19px"
+                  borderRadius: "19px",
                 }}
               />
 
@@ -400,14 +412,13 @@ export default function Ex() {
                   lg: "50vh",
                   md: "42vh",
                   sm: "40vh",
-                  xs:"45vh"
-                  
+                  xs: "45vh",
                 },
                 width: {
                   lg: "39vw",
                   md: "39vw",
                   sm: "35vw",
-                 xs:"65vw"
+                  xs: "65vw",
                 },
                 alignItems: "center",
                 borderRadius: "8px",
@@ -422,7 +433,7 @@ export default function Ex() {
                   lg: "-135px",
                   md: "-14%",
                   sm: "-1%",
-                 xs:"2%"
+                  xs: "2%",
                 },
 
                 ":before": {
@@ -431,6 +442,7 @@ export default function Ex() {
                   content: `''`,
                   width: "8%",
                   height: "12%",
+                  borderTopLeftRadius:"19px",
                   cursor: "pointer",
                   display: "flex",
                   alignitems: "center",
@@ -474,13 +486,13 @@ export default function Ex() {
               }}
             >
               <Image
-                src={Khajuro}
+                src={Amarkanatak}
                 alt="Gwalior"
                 style={{
                   height: "100%",
                   width: "100%",
 
-               borderRadius:"19px"
+                  borderRadius: "19px",
                 }}
               />
 
@@ -507,8 +519,6 @@ export default function Ex() {
                   md: "35vh",
                   sm: "40vh",
                   xs: "45vh",
-
-            
                 },
                 width: {
                   lg: "17vw",
@@ -521,7 +531,6 @@ export default function Ex() {
                 backgroundSize: "cover",
                 objectFit: "cover",
 
-               
                 borderRadius: "11%",
                 border: {
                   // lg: "3px solid green",
@@ -535,6 +544,7 @@ export default function Ex() {
                   borderBottomRightRadius: "80px",
                   content: `''`,
                   width: "8%",
+                  borderTopLeftRadius:"19px",
                   height: "12%",
                   cursor: "pointer",
                   display: "flex",
@@ -561,10 +571,10 @@ export default function Ex() {
                     height: {
                       lg: "29vh",
                       md: "33%",
-                      sm:"39%",
+                      sm: "39%",
                       xs: "45vh",
                     },
-                    content: `'Ujjain'`,
+                    content: `'Amarkanatak'`,
                     borderBottomRightRadius: "20px",
                     borderEndEndRadius: "20px",
                     transition: " all 0.5s",
@@ -574,7 +584,7 @@ export default function Ex() {
                   lg: "26%",
                   sm: "15%",
                   md: "2%",
-                 xs:"25%"
+                  xs: "25%",
                 },
                 marginTop: {
                   lg: "-1%",
@@ -585,14 +595,14 @@ export default function Ex() {
               }}
             >
               <Image
-                src={Gwalior}
+                src={Gwlior}
                 height={10000}
                 width={10000}
                 alt="no img"
                 style={{
                   height: "100%",
                   width: "100%",
-                  borderRadius:"19px"
+                  borderRadius: "19px",
                 }}
               />
 
@@ -609,7 +619,7 @@ export default function Ex() {
               </Box>
             </Box>
           </Grid>
-            {/* fifth box complite */}
+          {/* fifth box complite */}
           <Grid xs={12} sm={2} md={2} lg={2}>
             <Box
               sx={{
@@ -617,13 +627,13 @@ export default function Ex() {
                   lg: "29vh",
                   md: "35vh",
                   sm: "40vh",
-                  xs:"45vh"
+                  xs: "45vh",
                 },
                 width: {
                   lg: "17vw",
                   md: "20vw",
                   sm: "55vw",
-                  xs:"65vw"
+                  xs: "65vw",
                 },
                 alignItems: "center",
                 backgroundPosition: "center",
@@ -644,6 +654,7 @@ export default function Ex() {
                   content: `''`,
                   width: "8%",
                   height: "12%",
+                  borderTopLeftRadius:"19px",
                   cursor: "pointer",
                   display: "flex",
                   alignitems: "center",
@@ -672,7 +683,7 @@ export default function Ex() {
                       sm: "39%",
                       xs: "45vh",
                     },
-                    content: `'Amarkanatak'`,
+                    content: `'Ujjain'`,
                     borderBottomRightRadius: "20px",
                     borderEndEndRadius: "20px",
                     transition: " all 0.4s",
@@ -682,8 +693,7 @@ export default function Ex() {
                   lg: "33%",
                   md: "27%",
                   sm: "-43%",
-                  xs:"25%"
-           
+                  xs: "25%",
                 },
                 marginTop: {
                   lg: "-1%",
@@ -694,14 +704,14 @@ export default function Ex() {
               }}
             >
               <Image
-                src={Gwalior}
+                src={mhakal}
                 height={10000}
                 width={10000}
                 alt="no img"
                 style={{
                   height: "100%",
                   width: "100%",
-                  borderRadius:"19px"
+                  borderRadius: "19px",
                 }}
               />
 

@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -264,7 +265,7 @@ function Navbar1() {
                   variant="contained"
                   style={{ backgroundColor: "#4682c7" }}
                 >
-                  Login
+                   <Link href="/Login">Login</Link>
                 </Button>
               )}
 

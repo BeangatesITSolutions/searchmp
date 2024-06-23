@@ -96,7 +96,7 @@ export default function Page() {
                 style={{
                   height: "100%",
 
-                    border: "1px solid red",
+                    // border: "1px solid red",
                 }}
               />
             </Box>
@@ -122,6 +122,7 @@ export default function Page() {
                         color: "black",
                         ml: "35px",
                         mb: "4px",
+                        
                         // border:1
                         // alignItems:'center'
                       }}

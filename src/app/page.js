@@ -6,14 +6,14 @@
 import Navbar1 from "@/Components/Navbar/Navbar";
 import Slider from "@/Components/Slider";
 import AniCards from "@/Components/AniCards"
-import Explore from "@/Components/Explor/Explor";
-<<<<<<< HEAD
-import Education from "@/Components/Education/Education";
 
-=======
 import Card from "@/Components/Card";
-import Stories from "@/Components/Stories";
->>>>>>> 5ed6b26f9cc948bc53db966a917626525f10abca
+// import Stories from "@/Components/Stories";s 
+import Explore from "@/Components/Explor/Explor";
+// import Events from "@/Components/Event/Events";
+// import New from "@/Components/New/New";  
+import Footer from "@/Components/Footer/Footer"
+
 
 export default function page() {
   return (
@@ -23,15 +23,16 @@ export default function page() {
      <Navbar1/>
     <Slider/> 
     <AniCards/>
-<<<<<<< HEAD
-    <Explore/> 
-    <Education/>
-=======
-    {/* <Explore/> */}
-    <Stories/>
+  
+    {/* <Stories/> */}
     <Card/>
 
->>>>>>> 5ed6b26f9cc948bc53db966a917626525f10abca
+    <Explore/> 
+    {/* <Events/> */}
+    {/* <New/> */}
+    <Footer/>
+
+    
     
     
     </main>
